@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Lance un conteneur Docker Hello World
+                    sh 'docker run hello-world'
+                }
+            }
+        }
+    }
+}
